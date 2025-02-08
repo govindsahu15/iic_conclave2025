@@ -175,7 +175,7 @@ function App() {
               </div>
               <div>
                 <img
-                  src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80"
+                  src="/meeting.jpg"
                   alt="Conference discussion"
                   className="rounded-lg shadow-xl"
                 />
@@ -191,35 +191,47 @@ function App() {
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
+                  name: "Dr. K. N. Satyanarayana",
+                  role: "Patron",
+                  title: "Director, IIT Tirupati",
+                  image: "/director.jpg"
+                },
+                {
                   name: "Dr. N. Venkaiah",
                   role: "Chairman",
                   title: "Associate Professor, IIT Tirupati",
-                  image: "http://old.iittp.ac.in/images/demo/iit/venkaiah.jpg"
-                },
-                {
-                  name: "Dr. Govind Narayan Sahu",
-                  role: "Convenor",
-                  title: "Assistant Professor, IIT Tirupati",
-                  image: "https://smalab.org/sirprofile.jpg"
+                  image: "/venkaiah.jpg"
                 },
                 {
                   name: "Dr. Thiyagarajan R",
                   role: "convenor",
                   title: "Assistant Professor, IIT Tirupati",
-                  image: "http://old.iittp.ac.in/images/demo/iit/thiyagarajan.jpeg"
+                  image: "/thiyagarajan.jpeg"
+                },
+                {
+                  name: "Dr. Govind Narayan Sahu",
+                  role: "Convenor",
+                  title: "Assistant Professor, IIT Tirupati",
+                  image: "/Govind_N_Sahu.jpg"
                 },
                 {
                   name: "Dr. Srinivasa Krishna Addepalli",
                   role: "convenor",
                   title: "Assistant Professor, IIT Tirupati",
-                  image: "http://old.iittp.ac.in/images/demo/iit/as_krishna.jpg"
-                }
-                // {
-                //   name: "Dr. Rajesh Singh",
-                //   role: "convenor",
-                //   title: "Associate Professor, IIT Tirupati",
-                //   image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80"
-                // }
+                  image: "/as_krishna.jpg"
+                },
+                {
+                  name: "Dr. Baburaj M",
+                  role: "convenor",
+                  title: "Technical Officer, IIT Tirupati",
+                  image: "/baburaj.jpg"
+                },
+                {
+                  name: "Mr. B. Ramesh Kumar",
+                  role: "convenor",
+                  title: "Technical Superintendent, IIT Tirupati",
+                  image: "/me20d506-ramesh-kumar-b.jpg"
+                },
               ].map((member, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-md">
                   <img
@@ -539,6 +551,20 @@ function App() {
             </div>
           </div>
         </div> */}
+        {/* Campus Tour Section */}
+        <div className="py-20">
+          <div className="max-w-7xl mx-auto px-4">  {/* Increased max-w */}
+            <h2 className="text-4xl font-bold text-navy mb-8 text-center">Campus Tour</h2>
+            <div className="flex justify-center items-center">
+            <iframe 
+                  width="860" height="475" 
+                  src="https://www.youtube.com/embed/32GeyCGMeQY?si=v2bY71Js0wkviCiP" 
+                  title="YouTube video player" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowFullScreen></iframe>
+            </div>
+          </div>
+        </div>
 
         {/* Venue Section */}
         <div ref={sections.venue} className="py-20 bg-gray-50">
@@ -547,7 +573,7 @@ function App() {
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <img
-                  src="https://files.iittp.ac.in/images/demo/iit/campus/IIT_Admin_Block.png"
+                  src="/Picture1.jpg"
                   alt="IIT Tirupati Campus"
                   className="rounded-lg shadow-xl mb-6"
                 />
