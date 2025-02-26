@@ -239,8 +239,8 @@ function App() {
                 },
                 {
                   name: "Dr. Mamilla Ravi Sankar",
-                  role: "Patron",
-                  title: "HOD, IIT Tirupati",
+                  role: "HOD",
+                  title: "ME, IIT Tirupati",
                   image: "hod.jpeg"
                 },
                 {
@@ -401,70 +401,68 @@ function App() {
 
         {/* Venue Section */}
         <div ref={sections.venue} className="py-20 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4">
+          <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-4xl font-bold text-navy mb-12 text-center">Venue</h2>
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="flex justify-center">
                 <img
                   src="/Picture1.jpg"
                   alt="IIT Tirupati Campus"
-                  className="rounded-lg shadow-xl mb-6"
+                  className="rounded-lg shadow-xl mb-6 w-full max-w-4xl h-[285px] object-cover"
                 />
               </div>
-              <div className="space-y-6">
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-2xl font-bold text-navy mb-4">Location</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <a
-                        href="https://maps.app.goo.gl/1ZHVwHnfrKvu5HAk6"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Open IIT Tirupati in Google Maps"
-                      >
-                        <MapPinned className="text-golden flex-shrink-0 mt-1" />
-                      </a>
+              <div className="space-y-4">
+                <div className="bg-white p-4 rounded-lg shadow-md">
+                  <h3 className="text-xl font-bold text-navy mb-3">Location</h3>
+                  <div className="space-y-3">
+                    <a
+                      href="https://maps.app.goo.gl/1ZHVwHnfrKvu5HAk6"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open IIT Tirupati in Google Maps"
+                      className="flex items-start gap-3 hover:text-golden transition-colors duration-200"
+                    >
+                      <MapPinned className="text-golden flex-shrink-0 mt-1" />
                       <div>
                         <p className="font-semibold">Lecture Hall Complex (LHC)</p>
                         <p className="text-gray-600">IIT Tirupati</p>
                         <p className="text-gray-600">Yerpedu – Venkatagiri Road, Yerpedu Post,</p>
                         <p className="text-gray-600">Chittoor District, Andhra Pradesh - 517619</p>
                       </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <a
-                        href="https://maps.app.goo.gl/GFi2iSbhghmDiG3w5"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Open Tirupati Airport in Google Maps"
-                      >
-                        <MapPin className="text-golden flex-shrink-0" />
-                      </a>
+                    </a>
+                    <a
+                      href="https://maps.app.goo.gl/GFi2iSbhghmDiG3w5"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open Tirupati Airport in Google Maps"
+                      className="flex items-center gap-3 hover:text-golden transition-colors duration-200"
+                    >
+                      <MapPin className="text-golden flex-shrink-0" />
                       <div>
                         <p className="font-semibold">Nearest Airport</p>
-                        <p className="text-gray-600">Tirupati International Airport - 15 km</p>
+                        <p className="text-gray-600">Tirupati International Airport - 12 km</p>
                       </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <a
-                        href="https://maps.app.goo.gl/zaqr26nS7zc3pzsP8"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Open Renigunta Railway Station in Google Maps"
-                      >
-                        <Building2 className="text-golden flex-shrink-0" />
-                      </a>
+                    </a>
+                    <a
+                      href="https://maps.app.goo.gl/zaqr26nS7zc3pzsP8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open Renigunta Railway Station in Google Maps"
+                      className="flex items-center gap-3 hover:text-golden transition-colors duration-200"
+                    >
+                      <Building2 className="text-golden flex-shrink-0" />
                       <div>
                         <p className="font-semibold">Nearest Railway Station</p>
-                        <p className="text-gray-600">Renigunta Railway Station - 18 km</p>
+                        <p className="text-gray-600">Renigunta Railway Station - 14 km</p>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         {/* Sponsorship Section */}
         <div ref={sections.sponsorship} className="py-20 bg-white">
           <div className="max-w-6xl mx-auto px-4">
