@@ -27,7 +27,7 @@ function App() {
   const NavLink = ({ section, label, highlight }: { section: keyof typeof sections, label: string, highlight?: boolean }) => (
     <button
       onClick={() => scrollToSection(sections[section])}
-      className={`transition-colors duration-200 ${highlight ? 'bg-golden text-navy px-4 py-2 rounded-full font-bold hover:bg-golden-light' : 'hover:text-golden'}`}
+      className={`transition-colors duration-200 ${highlight ? 'bg-golden text-navy px-4 py-2 rounded-lg font-bold hover:bg-golden-light' : 'hover:text-golden'}`}
     >
       {label}
     </button>
@@ -146,7 +146,7 @@ function App() {
                 href="https://www.iittp.ac.in/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-golden text-navy px-8 py-3 rounded-full font-bold hover:bg-golden-light transition-colors duration-200 block"
+                className="bg-golden text-navy px-8 py-3 rounded-lg font-bold hover:bg-golden-light transition-colors duration-200 block"
               >
                 About IIT Tirupati
               </a>
@@ -154,7 +154,7 @@ function App() {
                 href="https://mech.iittp.ac.in/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-golden text-navy px-8 py-3 rounded-full font-bold hover:bg-golden-light transition-colors duration-200 block"
+                className="bg-golden text-navy px-8 py-3 rounded-lg font-bold hover:bg-golden-light transition-colors duration-200 block"
               >
                 About Department
               </a>
@@ -162,7 +162,7 @@ function App() {
                 href="ME Department Brochure.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-golden text-navy px-8 py-3 rounded-full font-bold hover:bg-golden-light transition-colors duration-200 block"
+                className="bg-golden text-navy px-8 py-3 rounded-lg font-bold hover:bg-golden-light transition-colors duration-200 block"
               >
                 Department Brochure
               </a>
@@ -170,7 +170,7 @@ function App() {
                 href="Flyer_IIC_2025_ME_IIT Tirupati.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-golden text-navy px-8 py-3 rounded-full font-bold hover:bg-golden-light transition-colors duration-200 block"
+                className="bg-golden text-navy px-8 py-3 rounded-lg font-bold hover:bg-golden-light transition-colors duration-200 block"
               >
                 Flyer
               </a>
