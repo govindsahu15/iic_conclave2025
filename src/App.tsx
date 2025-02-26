@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Menu, X, MapPin, Phone, Mail, Building2, Calendar, Users, Ticket, MapPinned, Handshake,Info, Lightbulb } from 'lucide-react';
+import { Menu, X, MapPin, Phone, Mail, Building2, Calendar, Users, Ticket, MapPinned, Handshake, Info, Lightbulb } from 'lucide-react';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -53,20 +53,18 @@ function App() {
     <div className="min-h-screen bg-white">
       {/* Navbar */}
       <nav
-        className={`fixed w-full z-50 shadow-lg transition-colors duration-300 ${
-          navBackground ? 'bg-navy/80 backdrop-blur-sm' : 'bg-navy'
-        } text-white`}
+        className={`fixed w-full z-50 shadow-lg transition-colors duration-300 ${navBackground ? 'bg-navy/80 backdrop-blur-sm' : 'bg-navy'} text-white`}
       >
-    <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
-    <div className="flex justify-between items-center h-16">
-        <div className="flex items-center">
-            <img
-                src="logo.svg" // Replace with the actual path to your image
+        <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center">
+              <img
+                src="logo.svg"
                 alt="IIC 2025 Logo"
-                className="h-12 w-13" // Same size as GraduationCap
-            />
-            <span className="ml-2 font-bold text-4xl">IIC 2025</span>
-        </div>
+                className="h-12 w-13"
+              />
+              <span className="ml-2 font-bold text-4xl">IIC 2025</span>
+            </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-6">
@@ -78,7 +76,7 @@ function App() {
               <NavLink section="sponsorship" label="Sponsorship" />
               <NavLink section="generalInfo" label="General Info" />
               <NavLink section="contact" label="Contact" />
-              <NavLink section="registration" label="Register Now" highlight={true}/>
+              <NavLink section="registration" label="Register Now" highlight={true} />
 
             </div>
 
@@ -97,15 +95,15 @@ function App() {
           <div className="md:hidden bg-navy-light">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <div className="flex flex-col space-y-3 p-4">
-                 <NavLink section="home" label="Home" />
-                 <NavLink section="about" label="Benefits" />
-                 <NavLink section="committee" label="Committee" />
-                 <NavLink section="agenda" label="Agenda" />
-                 <NavLink section="venue" label="Venue" />
-                 <NavLink section="sponsorship" label="Sponsorship" />
-                 <NavLink section="generalInfo" label="General Info" />
-                 <NavLink section="contact" label="Contact" />
-                 <NavLink section="registration" label="Register Now" highlight={true} />
+                <NavLink section="home" label="Home" />
+                <NavLink section="about" label="Benefits" />
+                <NavLink section="committee" label="Committee" />
+                <NavLink section="agenda" label="Agenda" />
+                <NavLink section="venue" label="Venue" />
+                <NavLink section="sponsorship" label="Sponsorship" />
+                <NavLink section="generalInfo" label="General Info" />
+                <NavLink section="contact" label="Contact" />
+                <NavLink section="registration" label="Register Now" highlight={true} />
               </div>
             </div>
           </div>
@@ -124,7 +122,8 @@ function App() {
             />
           </div>
           <div className="relative z-10 text-center px-4">
-          <p className="text-xl md:text-2xl mb-2">Department of Mechanical Engineering invites you to</p>
+            <p className="text-xl md:text-3xl font-bold mb-2 text-golden">Department of Mechanical Engineering</p>
+            <p className="text-xl md:text-2xl mb-2">invites you to</p>
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               Industry-Institute
               <span className="text-golden"> Conclave 2025</span>
@@ -188,11 +187,19 @@ function App() {
                 <p className="text-lg text-gray-700 leading-relaxed">
                   The Industry-Institute Conclave 2025 at IIT Tirupati offers several key benefits for industry partners:
                 </p>
-                <ul className="list-disc list-inside text-lg text-gray-700 leading-relaxed">
-                  <li>Collaboration/Networking opportunities for   Sponsored/Consultancy projects</li>
-                  <li>Higher education opportunities (M.Tech./MS/PhD) for your employees</li>
-                  <li>Access to ONLINE M.Tech. Program in Advanced Manufacturing</li>
-                  <li>Opportunity to explore cutting-edge facilities (fabrication/testing/characterization) at IIT Tirupati</li>
+                <ul className="list-disc list-inside text-lg text-gray-700 leading-relaxed" style={{ paddingLeft: '1.5em' }}>
+                  <li style={{ textIndent: '-1.5em', marginLeft: '1.5em' }}>
+                    Collaboration/Networking opportunities for Sponsored/Consultancy projects
+                  </li>
+                  <li style={{ textIndent: '-1.5em', marginLeft: '1.5em' }}>
+                    Higher education opportunities (M.Tech./MS/PhD) for your employees
+                  </li>
+                  <li style={{ textIndent: '-1.5em', marginLeft: '1.5em' }}>
+                    Access to ONLINE M.Tech. Program in Advanced Manufacturing
+                  </li>
+                  <li style={{ textIndent: '-1.5em', marginLeft: '1.5em' }}>
+                    Opportunity to explore cutting-edge facilities (fabrication/testing/characterization) at IIT Tirupati
+                  </li>
                 </ul>
                 <div className="grid grid-cols-2 gap-4 mt-8">
                   <div className="flex flex-col items-center p-4 bg-navy/5 rounded-lg">
@@ -244,7 +251,7 @@ function App() {
                 },
                 {
                   name: "Dr. Baburaj M",
-                  role: "convenor",
+                  role: "Convenor",
                   title: "Technical Officer, IIT Tirupati",
                   image: "/baburaj.jpg"
                 },
@@ -290,358 +297,363 @@ function App() {
 
         {/* Agenda Section */}
         <div ref={sections.agenda} className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
+          <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-4xl font-bold text-navy mb-12 text-center">Event Agenda</h2>
             <div className="grid md:grid-cols-1 gap-8">
-                {[
-                    "Faculty Presentations: Insights into the Department’s latest research and state-of-the-art facilities.",
-                    "Industry Presentations: Showcase expertise, requirements, and explore collaboration opportunities (student internships/placements, guest lectures, etc.).",
-                    "Laboratory Tour: Experience our cutting-edge laboratories and research infrastructure firsthand.",
-                    "Panel Discussion: Engage in conversations on the future of Mechanical Engineering, exploring areas of mutual interest between academia and industry.",
-                ].map((item, index) => {
-                    const parts = item.split(':'); // Split into title and description
-                    const title = parts[0];
-                    const description = parts.slice(1).join(':'); // Rejoin in case the description contains colons
+              {[
+                "Faculty Presentations: Insights into the Department’s latest research and state-of-the-art facilities.",
+                "Industry Presentations: Showcase expertise, requirements, and explore collaboration opportunities (student internships/placements, guest lectures, etc.).",
+                "Laboratory Tour: Experience our cutting-edge laboratories and research infrastructure firsthand.",
+                "Panel Discussion: Engage in conversations on the future of Mechanical Engineering, exploring areas of mutual interest between academia and industry.",
+              ].map((item, index) => {
+                const parts = item.split(':');
+                const title = parts[0];
+                const description = parts.slice(1).join(':');
 
-                    return (
-                        <div key={index} className="bg-white p-6 rounded-lg shadow-md flex items-start"> {/* Changed items-center to items-start */}
-                            <Lightbulb className="text-navy mr-4" size={32} />
-                            <p className="text-gray-700 leading-relaxed">
-                                <span className="font-bold">{title}:</span> {description}
-                            </p>
-                        </div>
-                    );
-                })}
+                return (
+                  <div key={index} className="bg-white p-6 rounded-lg shadow-md flex items-start">
+                    <Lightbulb className="text-navy mr-4" size={32} />
+                    <p className="text-gray-700 leading-relaxed">
+                      <span className="font-bold">{title}:</span> {description}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
+          </div>
         </div>
-    </div>
 
-  {/* Registration Section */}
-  <div ref={sections.registration} className="py-20 bg-gray-50">
-    <div className="max-w-6xl mx-auto px-4">
-      <h2 className="text-4xl font-bold text-navy mb-12 text-center">Registration</h2>
-      {/* Centered Container */}
-      <div className="mx-auto max-w-4xl">
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="registration-details">
-            {[
-              {
-                title: "Industry Professionals",
-                price: "₹500 (Refundable)",
-                features: [
-                  "Access to all sessions",
-                  "Conference kit",
-                  "Lunch and refreshments",
-                  "Access to Lab tour",
-                  "Free registration, including lodging and boarding for one person",
-                  "Network with industry leaders",
-                  "Refundable subject to attendance",
-                ],
-              },
-            ].map((plan, index) => (
-              <div key={index} className={`rounded-lg p-6 bg-white`}>
-                <h3 className="text-2xl font-bold mb-4">{plan.title}</h3>
-                <p className={`text-3xl font-bold mb-6 text-navy`}>
-                  ₹500
-                  <span className="text-golden text-2xl">(Refundable)</span>
-                </p>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, fIndex) => (
-                    <li key={fIndex} className="flex items-center gap-2">
-                      <Ticket className={"text-navy flex-shrink-0 h-5 w-5"} size={20} /> {/* Fixed size and no shrink */}
-                      <span className="text-gray-700">{feature}</span> {/* Span for the text */}
-                    </li>
+        {/* Registration Section */}
+        <div ref={sections.registration} className="py-20 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-4xl font-bold text-navy mb-12 text-center">Registration</h2>
+            {/* Centered Container */}
+            <div className="mx-auto max-w-4xl">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="registration-details">
+                  {[
+                    {
+                      title: "Industry Professionals",
+                      price: "₹500 (Refundable)",
+                      features: [
+                        "Access to all sessions",
+                        "Conference kit",
+                        "Lunch and refreshments",
+                        "Access to Lab tour",
+                        "Network with industry leaders",
+                        "Refundable subject to attendance",
+                      ],
+                    },
+                  ].map((plan, index) => (
+                    <div key={index} className={`rounded-lg p-6 bg-white`}>
+                      <h3 className="text-2xl font-bold mb-4">{plan.title}</h3>
+                      <p className={`text-3xl font-bold mb-6 text-navy`}>
+                        ₹500
+                        <span className="text-golden text-2xl"> (Refundable)</span>
+                      </p>
+                      <ul className="space-y-3 mb-8">
+                        {plan.features.map((feature, fIndex) => (
+                          <li key={fIndex} className="flex items-center gap-2">
+                            <Ticket className={"text-navy flex-shrink-0 h-5 w-5"} size={20} />
+                            <span className="text-gray-700">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <a
+                        href="https://forms.gle/V3FyxbckerFYjQDq9"
+                        className={`w-full py-2 rounded-lg font-bold transition-colors duration-200 bg-navy text-white hover:bg-navy-light block text-center`} //Important block text-center for width and text
+                        target="_blank" // Optional: Open in a new tab
+                        rel="noopener noreferrer" // Optional: Security best practice
+                      >
+                        Register Now
+                      </a>
+                    </div>
                   ))}
-                </ul>
-                <button
-                  className={`w-full py-2 rounded-lg font-bold transition-colors duration-200 bg-navy text-white hover:bg-navy-light`}
+                </div>
+                {/* QR Code */}
+                <div className="qr-code flex flex-col justify-center items-center bg-white rounded-lg p-4">
+                  <p className="text-lg font-semibold text-navy mb-2">Scan to Register</p>
+                  <img
+                    src="\Flyer_IIC_2025_ME_IIT Tirupati-1.png"
+                    alt="Registration QR Code"
+                    className="max-w-full h-auto rounded-lg shadow-md"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Campus Tour Section */}
+        <div className="py-20">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-4xl font-bold text-navy mb-8 text-center">Campus Tour</h2>
+            <div className="flex justify-center items-center">
+              <iframe
+                width="860" height="475"
+                src="https://www.youtube.com/embed/32GeyCGMeQY?si=v2bY71Js0wkviCiP"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen></iframe>
+            </div>
+          </div>
+        </div>
+
+        {/* Venue Section */}
+        <div ref={sections.venue} className="py-20 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-4xl font-bold text-navy mb-12 text-center">Venue</h2>
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <img
+                  src="/Picture1.jpg"
+                  alt="IIT Tirupati Campus"
+                  className="rounded-lg shadow-xl mb-6"
+                />
+              </div>
+              <div className="space-y-6">
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <h3 className="text-2xl font-bold text-navy mb-4">Location</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <a
+                        href="https://maps.app.goo.gl/1ZHVwHnfrKvu5HAk6"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open IIT Tirupati in Google Maps"
+                      >
+                        <MapPinned className="text-golden flex-shrink-0 mt-1" />
+                      </a>
+                      <div>
+                        <p className="font-semibold">Lecture Hall Complex (LHC)</p>
+                        <p className="text-gray-600">IIT Tirupati</p>
+                        <p className="text-gray-600">Yerpedu – Venkatagiri Road, Yerpedu Post,</p>
+                        <p className="text-gray-600">Chittoor District, Andhra Pradesh - 517619</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <a
+                        href="https://maps.app.goo.gl/GFi2iSbhghmDiG3w5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open Tirupati Airport in Google Maps"
+                      >
+                        <MapPin className="text-golden flex-shrink-0" />
+                      </a>
+                      <div>
+                        <p className="font-semibold">Nearest Airport</p>
+                        <p className="text-gray-600">Tirupati International Airport - 15 km</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <a
+                        href="https://maps.app.goo.gl/zaqr26nS7zc3pzsP8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open Renigunta Railway Station in Google Maps"
+                      >
+                        <Building2 className="text-golden flex-shrink-0" />
+                      </a>
+                      <div>
+                        <p className="font-semibold">Nearest Railway Station</p>
+                        <p className="text-gray-600">Renigunta Railway Station - 18 km</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Sponsorship Section */}
+        <div ref={sections.sponsorship} className="py-20 bg-white">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-4xl font-bold text-navy mb-12 text-center">Sponsorship Opportunities</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Diamond Sponsor",
+                  price: "₹75,000",
+                  benefits: [
+                    "The chief guest for the inauguration program",
+                    "Stall (2 m x 2 m)",
+                    "Company logo on banners",
+                    "Free registration, including lodging and boarding for two people",
+                  ]
+                },
+                {
+                  title: "Platinum Sponsor",
+                  price: "₹50,000",
+                  benefits: [
+                    "Guest of honour for the inauguration program",
+                    "Stall (2 m x 2 m)",
+                    "Company logo on banners",
+                    "Free registration, including lodging and boarding for one person",
+                  ]
+                },
+                {
+                  title: "Gold Sponsor",
+                  price: "₹25,000",
+                  benefits: [
+                    "Company logo on banners",
+                    "Free registration, including lodging and boarding for one person",
+                  ]
+                }
+              ].map((tier, index, array) => (
+                <div
+                  key={index}
+                  className={`bg-navy/5 p-6 rounded-lg ${index !== array.length - 1 ? 'border-b border-gray-300 pb-8' : ''}`}
                 >
-                  Register Now
-                </button>
-              </div>
-            ))}
-          </div>
-          {/* QR Code */}
-          <div className="qr-code flex flex-col justify-center items-center bg-white rounded-lg p-4">
-            <p className="text-lg font-semibold text-navy mb-2">Scan to Register</p>
-            <img
-              src="\Flyer_IIC_2025_ME_IIT Tirupati-1.png" // Replace with actual path to your QR code image
-              alt="Registration QR Code"
-              className="max-w-full h-auto rounded-lg shadow-md"
-            />
+                  <h3 className="text-2xl font-bold text-navy mb-2">{tier.title}</h3>
+                  <p className="text-3xl font-bold text-golden mb-6">{tier.price}</p>
+                  <ul className="space-y-3 mb-6">
+                    {tier.benefits.map((benefit, bIndex) => (
+                      <li key={bIndex} className="flex items-center gap-2">
+                        <Handshake className="text-navy flex-shrink-0 h-5 w-5" />
+                        <span className="text-gray-700">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <br></br>
+            <div className="flex justify-center">
+              <button className="w-full max-w-md bg-navy text-white py-2 rounded-lg font-bold hover:bg-navy-light transition-colors duration-200">
+                Become a Sponsor
+              </button>
+            </div>        
           </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  {/* Campus Tour Section */}
-  <div className="py-20">
-    <div className="max-w-7xl mx-auto px-4">  {/* Increased max-w */}
-      <h2 className="text-4xl font-bold text-navy mb-8 text-center">Campus Tour</h2>
-      <div className="flex justify-center items-center">
-      <iframe 
-            width="860" height="475" 
-            src="https://www.youtube.com/embed/32GeyCGMeQY?si=v2bY71Js0wkviCiP" 
-            title="YouTube video player" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowFullScreen></iframe>
-      </div>
-    </div>
-  </div>
+        {/* General Info Section */}
+        <div ref={sections.generalInfo} className="py-20 bg-white">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-4xl font-bold text-navy mb-12 text-center">General Information</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Flex container for equal height and width */}
+              <div className="flex flex-col">
+                <div className="bg-navy/5 p-6 rounded-lg flex-1 overflow-hidden">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Info className="text-golden" size={24} />
+                    <h3 className="text-2xl font-bold text-navy">Travel Information</h3>
+                  </div>
+                  <ul className="space-y-4">
+                    <li>
+                      <p className="font-semibold">From Airport:</p>
+                      <p className="text-gray-600">Pre-paid taxis and cab services available at the airport. Journey time approximately 30 minutes.</p>
+                    </li>
+                    <li>
+                      <p className="font-semibold">From Railway Station:</p>
+                      <p className="text-gray-600">Regular bus service and taxis available. Journey time approximately 45 minutes.</p>
+                    </li>
+                    <li>
+                      <p className="font-semibold">Local Transportation:</p>
+                      <p className="text-gray-600">Shuttle service will be available to the venue on charge bases.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-  {/* Venue Section */}
-  <div ref={sections.venue} className="py-20 bg-gray-50">
-  <div className="max-w-6xl mx-auto px-4">
-    <h2 className="text-4xl font-bold text-navy mb-12 text-center">Venue</h2>
-    <div className="grid md:grid-cols-2 gap-12">
-      <div>
-        <img
-          src="/Picture1.jpg"
-          alt="IIT Tirupati Campus"
-          className="rounded-lg shadow-xl mb-6"
-        />
-      </div>
-      <div className="space-y-6">
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h3 className="text-2xl font-bold text-navy mb-4">Location</h3>
-          <div className="space-y-4">
-            <div className="flex items-start gap-3">
-              <MapPinned className="text-golden flex-shrink-0 mt-1" />
-              <div>
-                <p className="font-semibold flex items-center">
-                  Indian Institute of Technology Tirupati
-                  <a
-                    href="https://maps.app.goo.gl/1ZHVwHnfrKvu5HAk6"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="ml-2 text-golden hover:underline"
-                  >
-                    (click)
-                  </a>
-                </p>
-                <p className="text-gray-600">Yerpedu – Venkatagiri Road, Yerpedu Post,</p>
-                <p className="text-gray-600">Chittoor District, Andhra Pradesh - 517619</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <MapPin className="text-golden flex-shrink-0" />
-              <div>
-                <p className="font-semibold">Nearest Airport</p>
-                <p className="text-gray-600">Tirupati Airport (TIR) - 15 km</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <Building2 className="text-golden flex-shrink-0" />
-              <div>
-                <p className="font-semibold">Nearest Railway Station</p>
-                <p className="text-gray-600">Tirupati Railway Station - 18 km</p>
+              {/* Flex container for equal height and width */}
+              <div className="flex flex-col">
+                <div className="bg-navy/5 p-6 rounded-lg flex-1 overflow-hidden">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Info className="text-golden" size={24} />
+                    <h3 className="text-2xl font-bold text-navy">Local Attractions</h3>
+                  </div>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <MapPin className="text-golden mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <p className="font-semibold">Tirumala Temple</p>
+                        <p className="text-gray-600">World's richest temple, 20 km from venue</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <MapPin className="text-golden mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <p className="font-semibold">Sri Venkateswara Museum</p>
+                        <p className="text-gray-600">Cultural heritage museum, 15 km from venue</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <MapPin className="text-golden mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <p className="font-semibold">Chandragiri Fort</p>
+                        <p className="text-gray-600">Historical monument, 25 km from venue</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div>
+                        <a href="https://tourism.ap.gov.in/assets/img/Brochures/Tirupati%20Places.pdf" target="_blank" rel="noopener noreferrer" className="font-semibold text-golden hover:underline">
+                          More Attractions ...
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  {/* Sponsorship Section */}
-  <div ref={sections.sponsorship} className="py-20 bg-white">
-  <div className="max-w-6xl mx-auto px-4">
-    <h2 className="text-4xl font-bold text-navy mb-12 text-center">Sponsorship Opportunities</h2>
-    <div className="grid md:grid-cols-3 gap-8">
-      {[
-        {
-          title: "Diamond Sponsor",
-          price: "₹75,000",
-          benefits: [
-            "The chief guest for the inauguration program",
-            "Stall (2 m x 2 m)",
-            "Company logo on banners",
-            "Free registration, including lodging and boarding for two people",
-          ]
-        },
-        {
-          title: "Platinum Sponsor",
-          price: "₹50,000",
-          benefits: [
-            "Guest of honour for the inauguration program",
-            "Stall (2 m x 2 m)",
-            "Company logo on banners",
-            "Free registration, including lodging and boarding for one person",
-          ]
-        },
-        {
-          title: "Gold Sponsor",
-          price: "₹25,000",
-          benefits: [
-            "Company logo on banners",
-            "Free registration, including lodging and boarding for one person",
-          ]
-        }
-      ].map((tier, index, array) => (
-        <div
-          key={index}
-          className={`bg-navy/5 p-6 rounded-lg ${
-            index !== array.length - 1 ? 'border-b border-gray-300 pb-8' : ''
-          }`}
-        >
-          <h3 className="text-2xl font-bold text-navy mb-2">{tier.title}</h3>
-          <p className="text-3xl font-bold text-golden mb-6">{tier.price}</p>
-          <ul className="space-y-3 mb-6">
-            {tier.benefits.map((benefit, bIndex) => (
-              <li key={bIndex} className="flex items-center gap-2">
-                <Handshake className="text-navy flex-shrink-0 h-5 w-5" /> {/* Fixed size and no shrink */}
-                <span className="text-gray-700">{benefit}</span> {/* Span for the text */}
-              </li>
-            ))}
-          </ul>
-          {/* Conditional Rendering for the Button */}
-          {tier.price === "₹50,000" && (
-            <button className="w-full bg-navy text-white py-2 rounded-lg font-bold hover:bg-navy-light transition-colors duration-200">
-              Become a Sponsor
-            </button>
-          )}
-        </div>
-      ))}
-    </div>
-  </div>
-</div>
 
-  {/* General Info Section */}
-  <div ref={sections.generalInfo} className="py-20 bg-white">
-    <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-navy mb-12 text-center">General Information</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-            {/* Flex container for equal height and width */}
-            <div className="flex flex-col">
-                <div className="bg-navy/5 p-6 rounded-lg flex-1 overflow-hidden"> {/* Added flex-1 and overflow-hidden */}
-                    <div className="flex items-center gap-3 mb-4">
-                        <Info className="text-golden" size={24} />
-                        <h3 className="text-2xl font-bold text-navy">Travel Information</h3>
-                    </div>
-                    <ul className="space-y-4">
-                        <li>
-                            <p className="font-semibold">From Airport:</p>
-                            <p className="text-gray-600">Pre-paid taxis and cab services available at the airport. Journey time approximately 30 minutes.</p>
-                        </li>
-                        <li>
-                            <p className="font-semibold">From Railway Station:</p>
-                            <p className="text-gray-600">Regular bus service and taxis available. Journey time approximately 45 minutes.</p>
-                        </li>
-                        <li>
-                            <p className="font-semibold">Local Transportation:</p>
-                            <p className="text-gray-600">Shuttle service will be provided from official hotels to the venue.</p>
-                        </li>
-                    </ul>
+        {/* Contact Section */}
+        <div ref={sections.contact} className="py-20 bg-navy text-white">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-4xl font-bold mb-12 text-center">Contact Us</h2>
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <Building2 className="text-golden" />
+                  <span>IIT Tirupati, Yerpedu – Venkatagiri Road, Chittoor District, Andhra Pradesh - 517619
+                  </span>
                 </div>
-            </div>
-
-            {/* Flex container for equal height and width */}
-            <div className="flex flex-col">
-                <div className="bg-navy/5 p-6 rounded-lg flex-1 overflow-hidden"> {/* Added flex-1 and overflow-hidden */}
-                    <div className="flex items-center gap-3 mb-4">
-                        <Info className="text-golden" size={24} />
-                        <h3 className="text-2xl font-bold text-navy">Local Attractions</h3>
-                    </div>
-                    <ul className="space-y-3">
-                        <li className="flex items-start gap-2">
-                            <MapPin className="text-golden mt-1 flex-shrink-0" size={20} />
-                            <div>
-                                <p className="font-semibold">Tirumala Temple</p>
-                                <p className="text-gray-600">World's richest temple, 20 km from venue</p>
-                            </div>
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <MapPin className="text-golden mt-1 flex-shrink-0" size={20} />
-                            <div>
-                                <p className="font-semibold">Sri Venkateswara Museum</p>
-                                <p className="text-gray-600">Cultural heritage museum, 15 km from venue</p>
-                            </div>
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <MapPin className="text-golden mt-1 flex-shrink-0" size={20} />
-                            <div>
-                                <p className="font-semibold">Chandragiri Fort</p>
-                                <p className="text-gray-600">Historical monument, 25 km from venue</p>
-                            </div>
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <div>
-                                <a href="https://tourism.ap.gov.in/assets/img/Brochures/Tirupati%20Places.pdf" target="_blank" rel="noopener noreferrer" className="font-semibold text-golden hover:underline">
-                                    More Attractions ...
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
+                <div className="flex items-center space-x-4">
+                  <Phone className="text-golden" />
+                  <span>+91 877 250 0716</span>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-  {/* Contact Section */}
-  <div ref={sections.contact} className="py-20 bg-navy text-white">
-    <div className="max-w-6xl mx-auto px-4">
-      <h2 className="text-4xl font-bold mb-12 text-center">Contact Us</h2>
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="space-y-6">
-            <div className="flex items-center space-x-4">
-              <Building2 className="text-golden" />
-              <span>IIT Tirupati, Yerpedu – Venkatagiri Road, Chittoor District, Andhra Pradesh - 517619
-              <a
-                href="https://maps.app.goo.gl/1ZHVwHnfrKvu5HAk6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-3 text-golden hover:underline"
-              >(click)
-              </a>
-              </span>
-            </div>
-            <div className="flex items-center space-x-4">
-              <Phone className="text-golden" />
-              <span>+91 877 250 0716</span>
-            </div>
-            <div className="flex items-center space-x-4">
-              <Mail className="text-golden" />
-              <span>conclave2025@iittp.ac.in</span>
-            </div>
-            <div className="mt-8">
-              <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-              <div className="grid grid-cols-2 gap-4">
-                <button className="text-left hover:text-golden transition-colors duration-200">FAQ</button>
-                <button className="text-left hover:text-golden transition-colors duration-200">Terms & Conditions</button>
-                <button className="text-left hover:text-golden transition-colors duration-200">Privacy Policy</button>
-                <button className="text-left hover:text-golden transition-colors duration-200">Cancellation Policy</button>
+                <div className="flex items-center space-x-4">
+                  <Mail className="text-golden" />
+                  <span>conclave2025@iittp.ac.in</span>
+                </div>
+                <div className="mt-8">
+                  <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+                  <div className="grid grid-cols-2 gap-4">
+                    <button className="text-left hover:text-golden transition-colors duration-200">FAQ</button>
+                    <button className="text-left hover:text-golden transition-colors duration-200">Terms & Conditions</button>
+                    <button className="text-left hover:text-golden transition-colors duration-200">Privacy Policy</button>
+                    <button className="text-left hover:text-golden transition-colors duration-200">Cancellation Policy</button>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <form className="space-y-4">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="w-full p-3 rounded bg-navy-light border border-golden/30 text-white"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    className="w-full p-3 rounded bg-navy-light border border-golden/30 text-white"
+                  />
+                  <textarea
+                    placeholder="Your Message"
+                    rows={4}
+                    className="w-full p-3 rounded bg-navy-light border border-golden/30 text-white"
+                  ></textarea>
+                  <button className="w-full bg-golden text-navy px-6 py-3 rounded font-bold hover:bg-golden-light transition-colors duration-200">
+                    Send Message
+                  </button>
+                </form>
               </div>
             </div>
           </div>
-          <div>
-              <form className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-full p-3 rounded bg-navy-light border border-golden/30 text-white"
-                />
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-full p-3 rounded bg-navy-light border border-golden/30 text-white"
-                />
-                <textarea
-                  placeholder="Your Message"
-                  rows={4}
-                  className="w-full p-3 rounded bg-navy-light border border-golden/30 text-white"
-                ></textarea>
-                <button className="w-full bg-golden text-navy px-6 py-3 rounded font-bold hover:bg-golden-light transition-colors duration-200">
-                  Send Message
-                </button>
-              </form>
-            </div>
-          </div>
         </div>
       </div>
     </div>
-  </div>
   );
 }
 
