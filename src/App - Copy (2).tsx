@@ -1,10 +1,9 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Menu, X, MapPin, Phone, Mail, Building2, Calendar, Users, Ticket, MapPinned, Handshake, Info, Lightbulb } from 'lucide-react';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [navBackground, setNavBackground] = React.useState(false);
-  const [activeContactTab, setActiveContactTab] = useState<string | null>(null);
 
   const sections = {
     home: useRef<HTMLDivElement>(null),
@@ -64,7 +63,7 @@ function App() {
                 alt="IIC 2025 Logo"
                 className="h-12 w-13"
               />
-              <span className="ml-2 font-bold text-4xl">IAC 2025</span>
+              <span className="ml-2 font-bold text-4xl">IIC 2025</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -187,38 +186,38 @@ function App() {
               <div className="space-y-6">
                 <ul className="list-disc text-lg text-gray-700 leading-relaxed pl-8">
                   <li className="mb-4">
-                    <span className="font-bold">Sponsored/Consultancy projects</span>
+                    Sponsored/Consultancy projects
                     <ul className="list-disc ml-8 mt-2">
                       <li>Inviting problem statements from the Industry</li>
                     </ul>
                   </li>
                   <li className="mb-4">
-                    <span className="font-bold">Executive (online) M. Tech. Programs in Manufacturing &amp; Energy storage</span>
+                    Executive (online) M. Tech. Programs in Manufacturing &amp; Energy storage
                     <ul className="list-disc ml-8 mt-2">
                       <li>Curriculum, Fee, and other modalities will be discussed during the program</li>
                     </ul>
                   </li>
                   <li className="mb-4">
-                    <span className="font-bold">MS/PhD degree without GATE score</span>
+                    MS/PhD degree without GATE score
                     <ul className="list-disc ml-8 mt-2">
                       <li>Curriculum, Fee, and other modalities will be discussed during the program</li>
                     </ul>
                   </li>
                   <li className="mb-4">
-                    <span className="font-bold">Facilities (fabrication/testing/characterization) at IIT Tirupati</span>
+                    Facilities (fabrication/testing/characterization) at IIT Tirupati
                     <ul className="list-disc ml-8 mt-2">
                       <li>for the industry's needs</li>
                       <li>for conducting the training programs</li>
                     </ul>
                   </li>
                   <li className="mb-4">
-                    <span className="font-bold">Internships/Placements</span>
+                    Internships/Placements
                     <ul className="list-disc ml-8 mt-2">
                       <li>Internships for a duration of 2 to 10 months for the UG/PG students at the Industry</li>
                     </ul>
                   </li>
                   <li className="mb-4">
-                    <span className="font-bold">Participation of Mechanical Engineering students from IIT Tirupati</span>
+                    Participation of Mechanical Engineering students from IIT Tirupati.
                   </li>
                 </ul>
                 <div className="grid grid-cols-2 gap-4 mt-8">
@@ -379,7 +378,7 @@ function App() {
                         ))}
                       </ul>
                       <a
-                        href="https://forms.gle/BUjAMibaVQ326nS86"
+                        href="https://forms.gle/V3FyxbckerFYjQDq9"
                         className={`w-full py-2 rounded-lg font-bold transition-colors duration-200 bg-navy text-white hover:bg-navy-light block text-center`} //Important block text-center for width and text
                         target="_blank" // Optional: Open in a new tab
                         rel="noopener noreferrer" // Optional: Security best practice
@@ -541,15 +540,10 @@ function App() {
             </div>
             <br></br>
             <div className="flex justify-center">
-              <a
-                href="https://forms.gle/2oqiY1WKYQX2Lm138"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full max-w-md bg-navy text-white py-2 rounded-lg font-bold hover:bg-navy-light transition-colors duration-200 text-center"
-              >
+              <button className="w-full max-w-md bg-navy text-white py-2 rounded-lg font-bold hover:bg-navy-light transition-colors duration-200">
                 Become a Sponsor
-              </a>
-            </div>      
+              </button>
+            </div>        
           </div>
         </div>
 
@@ -647,99 +641,11 @@ function App() {
                 <div className="mt-8">
                   <h3 className="text-xl font-bold mb-4">Quick Links</h3>
                   <div className="grid grid-cols-2 gap-4">
-                    <button
-                      className={`text-left hover:text-golden transition-colors duration-200 ${activeContactTab === 'faq' ? 'font-bold underline' : ''}`}
-                      onClick={() => setActiveContactTab(activeContactTab === 'faq' ? null : 'faq')}
-                    >
-                      FAQ
-                    </button>
-                    <button
-                      className={`text-left hover:text-golden transition-colors duration-200 ${activeContactTab === 'terms' ? 'font-bold underline' : ''}`}
-                      onClick={() => setActiveContactTab(activeContactTab === 'terms' ? null : 'terms')}
-                    >
-                      Terms & Conditions
-                    </button>
-                    <button
-                      className={`text-left hover:text-golden transition-colors duration-200 ${activeContactTab === 'privacy' ? 'font-bold underline' : ''}`}
-                      onClick={() => setActiveContactTab(activeContactTab === 'privacy' ? null : 'privacy')}
-                    >
-                      Privacy Policy
-                    </button>
-                    <button
-                      className={`text-left hover:text-golden transition-colors duration-200 ${activeContactTab === 'cancellation' ? 'font-bold underline' : ''}`}
-                      onClick={() => setActiveContactTab(activeContactTab === 'cancellation' ? null : 'cancellation')}
-                    >
-                      Cancellation Policy
-                    </button>
+                    <button className="text-left hover:text-golden transition-colors duration-200">FAQ</button>
+                    <button className="text-left hover:text-golden transition-colors duration-200">Terms & Conditions</button>
+                    <button className="text-left hover:text-golden transition-colors duration-200">Privacy Policy</button>
+                    <button className="text-left hover:text-golden transition-colors duration-200">Cancellation Policy</button>
                   </div>
-                  {/* FAQ Tab */}
-                  {activeContactTab === 'faq' && (
-                    <div className="bg-white text-navy rounded-lg shadow-md mt-6 p-6">
-                      <h4 className="text-2xl font-bold mb-4">Frequently Asked Questions</h4>
-                      <ul className="space-y-4">
-                        <li>
-                          <strong>1. What is the date and venue of the Industry-Academia Conclave 2025?</strong>
-                          <br />
-                          The event will be held on September 25, 2025 at IIT Tirupati, Andhra Pradesh.
-                        </li>
-                        <li>
-                          <strong>2. How can I register for the conclave?</strong>
-                          <br />
-                          You can register online using the QR code or the registration link provided on this website.
-                        </li>
-                        <li>
-                          <strong>3. What is included in the registration fee?</strong>
-                          <br />
-                          The fee covers access to all sessions, conclave kit, lunch, refreshments, and lab tour.
-                        </li>
-                        <li>
-                          <strong>4. Is accommodation provided for participants?</strong>
-                          <br />
-                          Guest house accommodation at IIT Tirupati is limited and will be allotted on a first-come, first-served basis. In most cases, participants are advised to book hotels in Tirupati city.
-                        </li>
-                        <li>
-                          <strong>5. Can I get a refund if I cancel my registration?</strong>
-                          <br />
-                          Registration fee is non-refundable.
-                        </li>
-                        <li>
-                          <strong>6. Are travel arrangements provided?</strong>
-                          <br />
-                          Shuttle service will be available to the venue on a chargeable basis. Other travel arrangements are to be made by participants.
-                        </li>
-                        <li>
-                          <strong>7. Who can attend the conclave?</strong>
-                          <br />
-                          Industry professionals and Startups interested in Mechanical Engineering and industry-academia collaboration.
-                        </li>
-                        <li>
-                          <strong>8. Will there be opportunities for networking?</strong>
-                          <br />
-                          Yes, the conclave includes networking sessions with industry leaders and faculty.
-                        </li>
-                        <li>
-                          <strong>9. How do I reach IIT Tirupati?</strong>
-                          <br />
-                          The campus is accessible from Tirupati International Airport (12 km) and Renigunta Railway Station (14 km).
-                        </li>
-                        <li>
-                          <strong>10. Whom should I contact for further queries?</strong>
-                          <br />
-                          You may contact us at <a href="mailto:iac_me@iittp.ac.in" className="text-golden underline">iac_me@iittp.ac.in</a> or call +91 94454 81096.
-                        </li>
-                      </ul>
-                    </div>
-                  )}
-                  {/* Cancellation Policy Tab */}
-                  {activeContactTab === 'cancellation' && (
-                    <div className="bg-white text-navy rounded-lg shadow-md mt-6 p-6">
-                      <h4 className="text-2xl font-bold mb-4">Cancellation Policy</h4>
-                      <p className="text-lg">
-                        Registration fee is non-refundable. Please ensure your availability before registering for the event.
-                      </p>
-                    </div>
-                  )}
-                  {/* Other tabs can be similarly added if needed */}
                 </div>
               </div>
               <div>

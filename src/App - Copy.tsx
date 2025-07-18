@@ -1,10 +1,9 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Menu, X, MapPin, Phone, Mail, Building2, Calendar, Users, Ticket, MapPinned, Handshake, Info, Lightbulb } from 'lucide-react';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [navBackground, setNavBackground] = React.useState(false);
-  const [activeContactTab, setActiveContactTab] = useState<string | null>(null);
 
   const sections = {
     home: useRef<HTMLDivElement>(null),
@@ -64,7 +63,7 @@ function App() {
                 alt="IIC 2025 Logo"
                 className="h-12 w-13"
               />
-              <span className="ml-2 font-bold text-4xl">IAC 2025</span>
+              <span className="ml-2 font-bold text-4xl">IIC 2025</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -185,40 +184,21 @@ function App() {
             <h2 className="text-4xl font-bold text-navy mb-12 text-center">Benefits for Industry</h2>
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-6">
-                <ul className="list-disc text-lg text-gray-700 leading-relaxed pl-8">
-                  <li className="mb-4">
-                    <span className="font-bold">Sponsored/Consultancy projects</span>
-                    <ul className="list-disc ml-8 mt-2">
-                      <li>Inviting problem statements from the Industry</li>
-                    </ul>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  The Industry-Institute Conclave 2025 at IIT Tirupati offers several key benefits for industry partners:
+                </p>
+                <ul className="list-disc list-inside text-lg text-gray-700 leading-relaxed" style={{ paddingLeft: '1.5em' }}>
+                  <li style={{ textIndent: '-1.5em', marginLeft: '1.5em' }}>
+                    Collaboration/Networking opportunities for Sponsored/Consultancy projects
                   </li>
-                  <li className="mb-4">
-                    <span className="font-bold">Executive (online) M. Tech. Programs in Manufacturing &amp; Energy storage</span>
-                    <ul className="list-disc ml-8 mt-2">
-                      <li>Curriculum, Fee, and other modalities will be discussed during the program</li>
-                    </ul>
+                  <li style={{ textIndent: '-1.5em', marginLeft: '1.5em' }}>
+                    Higher education opportunities (M.Tech./MS/PhD) for your employees
                   </li>
-                  <li className="mb-4">
-                    <span className="font-bold">MS/PhD degree without GATE score</span>
-                    <ul className="list-disc ml-8 mt-2">
-                      <li>Curriculum, Fee, and other modalities will be discussed during the program</li>
-                    </ul>
+                  <li style={{ textIndent: '-1.5em', marginLeft: '1.5em' }}>
+                    Access to ONLINE M.Tech. Program in Advanced Manufacturing
                   </li>
-                  <li className="mb-4">
-                    <span className="font-bold">Facilities (fabrication/testing/characterization) at IIT Tirupati</span>
-                    <ul className="list-disc ml-8 mt-2">
-                      <li>for the industry's needs</li>
-                      <li>for conducting the training programs</li>
-                    </ul>
-                  </li>
-                  <li className="mb-4">
-                    <span className="font-bold">Internships/Placements</span>
-                    <ul className="list-disc ml-8 mt-2">
-                      <li>Internships for a duration of 2 to 10 months for the UG/PG students at the Industry</li>
-                    </ul>
-                  </li>
-                  <li className="mb-4">
-                    <span className="font-bold">Participation of Mechanical Engineering students from IIT Tirupati</span>
+                  <li style={{ textIndent: '-1.5em', marginLeft: '1.5em' }}>
+                    Opportunity to explore cutting-edge facilities (fabrication/testing/characterization) at IIT Tirupati
                   </li>
                 </ul>
                 <div className="grid grid-cols-2 gap-4 mt-8">
@@ -234,12 +214,11 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="flex items-start justify-end h-full">
+              <div>
                 <img
                   src="/meeting.jpg"
                   alt="Conference discussion"
                   className="rounded-lg shadow-xl"
-                  style={{ objectFit: 'cover', transform: 'scale(1.1)', transformOrigin: 'top right', marginTop: '20mm', marginLeft: '30mm' }}
                 />
               </div>
             </div>
@@ -250,9 +229,20 @@ function App() {
         <div ref={sections.committee} className="py-20 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-4xl font-bold text-navy mb-12 text-center">Organizing Committee</h2>
-            {/* First row: Chairman and Convenor */}
-            <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-8">
+            <div className="grid md:grid-cols-3 gap-8">
               {[
+                {
+                  name: "Dr. K. N. Satyanarayana",
+                  role: "Patron",
+                  title: "Director, IIT Tirupati",
+                  image: "/director.jpg"
+                },
+                {
+                  name: "Dr. Mamilla Ravi Sankar",
+                  role: "HOD",
+                  title: "ME, IIT Tirupati",
+                  image: "hod.jpeg"
+                },
                 {
                   name: "Dr. N. Venkaiah",
                   role: "Chairman",
@@ -264,23 +254,7 @@ function App() {
                   role: "Convenor",
                   title: "Technical Officer, IIT Tirupati",
                   image: "/baburaj.jpg"
-                }
-              ].map((member, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-32 h-32 rounded-full mb-4 object-cover"
-                  />
-                  <h3 className="text-xl font-bold text-navy text-center">{member.name}</h3>
-                  <p className="text-golden font-semibold text-center">{member.role}</p>
-                  <p className="text-gray-600 text-center">{member.title}</p>
-                </div>
-              ))}
-            </div>
-            {/* Second row: Only Members */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
-              {[
+                },
                 {
                   name: "Dr. Thiyagarajan R",
                   role: "Member",
@@ -298,13 +272,19 @@ function App() {
                   role: "Member",
                   title: "Assistant Professor, IIT Tirupati",
                   image: "/Govind_N_Sahu.jpg"
-                }
+                },
+                {
+                  name: "Mr. B. Ramesh Kumar",
+                  role: "Member",
+                  title: "Technical Superintendent, IIT Tirupati",
+                  image: "/me20d506-ramesh-kumar-b.jpg"
+                },
               ].map((member, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+                <div key={index} className="bg-white p-6 rounded-lg shadow-md">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-32 h-32 rounded-full mb-4 object-cover"
+                    className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
                   />
                   <h3 className="text-xl font-bold text-navy text-center">{member.name}</h3>
                   <p className="text-golden font-semibold text-center">{member.role}</p>
@@ -321,10 +301,10 @@ function App() {
             <h2 className="text-4xl font-bold text-navy mb-12 text-center">Event Agenda</h2>
             <div className="grid md:grid-cols-1 gap-8">
               {[
-                "Faculty Presentations: Gain insights into our Department’s latest research initiatives and projects, highlighting our expertise and state-of-the-art facilities.",
-                "Industry Professionals’ Presentations: Showcase your expertise and challenges faced by the industry while exploring collaboration opportunities, including: Student internships/placements; Guest lectures and other industrial engagements.",
+                "Faculty Presentations: Insights into the Department’s latest research and state-of-the-art facilities.",
+                "Industry Presentations: Showcase expertise, requirements, and explore collaboration opportunities (student internships/placements, guest lectures, etc.).",
                 "Laboratory Tour: Experience our cutting-edge laboratories and research infrastructure firsthand.",
-                "Panel Discussion: Participate in engaging conversations on the future of Mechanical Engineering and its alignment with industry practices, fostering future collaborations between the Institute and Industry.",
+                "Panel Discussion: Engage in conversations on the future of Mechanical Engineering, exploring areas of mutual interest between academia and industry.",
               ].map((item, index) => {
                 const parts = item.split(':');
                 const title = parts[0];
@@ -354,13 +334,14 @@ function App() {
                   {[
                     {
                       title: "Industry Professionals",
-                      price: "₹500",
+                      price: "₹500 (Refundable)",
                       features: [
                         "Access to all sessions",
-                        "Conclave kit",
+                        "Conference kit",
                         "Lunch and refreshments",
                         "Access to Lab tour",
                         "Network with industry leaders",
+                        "Refundable subject to attendance",
                       ],
                     },
                   ].map((plan, index) => (
@@ -368,7 +349,7 @@ function App() {
                       <h3 className="text-2xl font-bold mb-4">{plan.title}</h3>
                       <p className={`text-3xl font-bold mb-6 text-navy`}>
                         ₹500
-                        <span className="text-golden text-2xl"></span>
+                        <span className="text-golden text-2xl"> (Refundable)</span>
                       </p>
                       <ul className="space-y-3 mb-8">
                         {plan.features.map((feature, fIndex) => (
@@ -379,7 +360,7 @@ function App() {
                         ))}
                       </ul>
                       <a
-                        href="https://forms.gle/BUjAMibaVQ326nS86"
+                        href="https://forms.gle/V3FyxbckerFYjQDq9"
                         className={`w-full py-2 rounded-lg font-bold transition-colors duration-200 bg-navy text-white hover:bg-navy-light block text-center`} //Important block text-center for width and text
                         target="_blank" // Optional: Open in a new tab
                         rel="noopener noreferrer" // Optional: Security best practice
@@ -390,18 +371,13 @@ function App() {
                   ))}
                 </div>
                 {/* QR Code */}
-                <div className="flex flex-col items-center justify-center bg-white rounded-lg p-6">
-                  <p className="text-lg font-semibold text-navy text-center mb-8">
-                    Scan to Register
-                  </p>
-                  <div className="flex justify-center w-full">
-                    <img
-                      src="\QR Code For Registration.png"
-                      alt="Registration QR Code"
-                      className="rounded-lg shadow-md"
-                      style={{ width: '290px', height: '290px', objectFit: 'contain' }}
-                    />
-                  </div>
+                <div className="qr-code flex flex-col justify-center items-center bg-white rounded-lg p-4">
+                  <p className="text-lg font-semibold text-navy mb-2">Scan to Register</p>
+                  <img
+                    src="\Flyer_IIC_2025_ME_IIT Tirupati-1.png"
+                    alt="Registration QR Code"
+                    className="max-w-full h-auto rounded-lg shadow-md"
+                  />
                 </div>
               </div>
             </div>
@@ -440,7 +416,7 @@ function App() {
                   <h3 className="text-xl font-bold text-navy mb-3">Location</h3>
                   <div className="space-y-3">
                     <a
-                      href="https://maps.app.goo.gl/uMUjNBLaRLT95fdy9"
+                      href="https://maps.app.goo.gl/1ZHVwHnfrKvu5HAk6"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Open IIT Tirupati in Google Maps"
@@ -448,7 +424,7 @@ function App() {
                     >
                       <MapPinned className="text-golden flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold">Academic Building 2 (AB2, CR-104)</p>
+                        <p className="font-semibold">Lecture Hall Complex (LHC)</p>
                         <p className="text-gray-600">IIT Tirupati</p>
                         <p className="text-gray-600">Yerpedu – Venkatagiri Road, Yerpedu Post,</p>
                         <p className="text-gray-600">Chittoor District, Andhra Pradesh - 517619</p>
@@ -541,15 +517,10 @@ function App() {
             </div>
             <br></br>
             <div className="flex justify-center">
-              <a
-                href="https://forms.gle/2oqiY1WKYQX2Lm138"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full max-w-md bg-navy text-white py-2 rounded-lg font-bold hover:bg-navy-light transition-colors duration-200 text-center"
-              >
+              <button className="w-full max-w-md bg-navy text-white py-2 rounded-lg font-bold hover:bg-navy-light transition-colors duration-200">
                 Become a Sponsor
-              </a>
-            </div>      
+              </button>
+            </div>        
           </div>
         </div>
 
@@ -638,108 +609,20 @@ function App() {
                 </div>
                 <div className="flex items-center space-x-4">
                   <Phone className="text-golden" />
-                  <span>+91 94454 81096</span>
+                  <span>+91 877 250 0716</span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <Mail className="text-golden" />
-                  <span>iac_me@iittp.ac.in</span>
+                  <span>conclave2025@iittp.ac.in</span>
                 </div>
                 <div className="mt-8">
                   <h3 className="text-xl font-bold mb-4">Quick Links</h3>
                   <div className="grid grid-cols-2 gap-4">
-                    <button
-                      className={`text-left hover:text-golden transition-colors duration-200 ${activeContactTab === 'faq' ? 'font-bold underline' : ''}`}
-                      onClick={() => setActiveContactTab(activeContactTab === 'faq' ? null : 'faq')}
-                    >
-                      FAQ
-                    </button>
-                    <button
-                      className={`text-left hover:text-golden transition-colors duration-200 ${activeContactTab === 'terms' ? 'font-bold underline' : ''}`}
-                      onClick={() => setActiveContactTab(activeContactTab === 'terms' ? null : 'terms')}
-                    >
-                      Terms & Conditions
-                    </button>
-                    <button
-                      className={`text-left hover:text-golden transition-colors duration-200 ${activeContactTab === 'privacy' ? 'font-bold underline' : ''}`}
-                      onClick={() => setActiveContactTab(activeContactTab === 'privacy' ? null : 'privacy')}
-                    >
-                      Privacy Policy
-                    </button>
-                    <button
-                      className={`text-left hover:text-golden transition-colors duration-200 ${activeContactTab === 'cancellation' ? 'font-bold underline' : ''}`}
-                      onClick={() => setActiveContactTab(activeContactTab === 'cancellation' ? null : 'cancellation')}
-                    >
-                      Cancellation Policy
-                    </button>
+                    <button className="text-left hover:text-golden transition-colors duration-200">FAQ</button>
+                    <button className="text-left hover:text-golden transition-colors duration-200">Terms & Conditions</button>
+                    <button className="text-left hover:text-golden transition-colors duration-200">Privacy Policy</button>
+                    <button className="text-left hover:text-golden transition-colors duration-200">Cancellation Policy</button>
                   </div>
-                  {/* FAQ Tab */}
-                  {activeContactTab === 'faq' && (
-                    <div className="bg-white text-navy rounded-lg shadow-md mt-6 p-6">
-                      <h4 className="text-2xl font-bold mb-4">Frequently Asked Questions</h4>
-                      <ul className="space-y-4">
-                        <li>
-                          <strong>1. What is the date and venue of the Industry-Academia Conclave 2025?</strong>
-                          <br />
-                          The event will be held on September 25, 2025 at IIT Tirupati, Andhra Pradesh.
-                        </li>
-                        <li>
-                          <strong>2. How can I register for the conclave?</strong>
-                          <br />
-                          You can register online using the QR code or the registration link provided on this website.
-                        </li>
-                        <li>
-                          <strong>3. What is included in the registration fee?</strong>
-                          <br />
-                          The fee covers access to all sessions, conclave kit, lunch, refreshments, and lab tour.
-                        </li>
-                        <li>
-                          <strong>4. Is accommodation provided for participants?</strong>
-                          <br />
-                          Guest house accommodation at IIT Tirupati is limited and will be allotted on a first-come, first-served basis. In most cases, participants are advised to book hotels in Tirupati city.
-                        </li>
-                        <li>
-                          <strong>5. Can I get a refund if I cancel my registration?</strong>
-                          <br />
-                          Registration fee is non-refundable.
-                        </li>
-                        <li>
-                          <strong>6. Are travel arrangements provided?</strong>
-                          <br />
-                          Shuttle service will be available to the venue on a chargeable basis. Other travel arrangements are to be made by participants.
-                        </li>
-                        <li>
-                          <strong>7. Who can attend the conclave?</strong>
-                          <br />
-                          Industry professionals and Startups interested in Mechanical Engineering and industry-academia collaboration.
-                        </li>
-                        <li>
-                          <strong>8. Will there be opportunities for networking?</strong>
-                          <br />
-                          Yes, the conclave includes networking sessions with industry leaders and faculty.
-                        </li>
-                        <li>
-                          <strong>9. How do I reach IIT Tirupati?</strong>
-                          <br />
-                          The campus is accessible from Tirupati International Airport (12 km) and Renigunta Railway Station (14 km).
-                        </li>
-                        <li>
-                          <strong>10. Whom should I contact for further queries?</strong>
-                          <br />
-                          You may contact us at <a href="mailto:iac_me@iittp.ac.in" className="text-golden underline">iac_me@iittp.ac.in</a> or call +91 94454 81096.
-                        </li>
-                      </ul>
-                    </div>
-                  )}
-                  {/* Cancellation Policy Tab */}
-                  {activeContactTab === 'cancellation' && (
-                    <div className="bg-white text-navy rounded-lg shadow-md mt-6 p-6">
-                      <h4 className="text-2xl font-bold mb-4">Cancellation Policy</h4>
-                      <p className="text-lg">
-                        Registration fee is non-refundable. Please ensure your availability before registering for the event.
-                      </p>
-                    </div>
-                  )}
-                  {/* Other tabs can be similarly added if needed */}
                 </div>
               </div>
               <div>
