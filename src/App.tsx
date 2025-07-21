@@ -126,19 +126,19 @@ function App() {
             <p className="text-xl md:text-3xl font-bold mb-2 text-golden">Department of Mechanical Engineering</p>
             <p className="text-xl md:text-2xl mb-2">cordially invites you to</p>
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Industry-Academia
+              Industry-Academia 
               <span className="text-golden"> Conclave 2025</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8">Bridging Academia and Industry</p>
             <div className="flex flex-col md:flex-row justify-center items-center gap-4">
               <div className="flex items-center gap-2">
                 <Calendar className="text-golden" />
-                <span>September 25, 2025</span>
+                <span style={{ fontSize: '1.5em' }}> September 20, 2025</span>
               </div>
               <div className="hidden md:block text-golden">|</div>
               <div className="flex items-center gap-2">
                 <MapPin className="text-golden" />
-                <span>IIT Tirupati, Andhra Pradesh</span>
+                <span  style={{ fontSize: '1.5em' }}> IIT Tirupati, Andhra Pradesh</span>
               </div>
             </div>
             {/* Container for buttons with spacing */}
@@ -496,6 +496,7 @@ function App() {
                 {
                   title: "Diamond Sponsor",
                   price: "₹75,000",
+                  priceColor: "#1a237e", // dark navy
                   benefits: [
                     "The chief guest for the inauguration program",
                     "Stall (2 m x 2 m)",
@@ -506,6 +507,7 @@ function App() {
                 {
                   title: "Platinum Sponsor",
                   price: "₹50,000",
+                  priceColor: "#1a237e", // dark navy
                   benefits: [
                     "Guest of honour for the inauguration program",
                     "Stall (2 m x 2 m)",
@@ -516,6 +518,7 @@ function App() {
                 {
                   title: "Gold Sponsor",
                   price: "₹25,000",
+                  priceColor: "#1a237e", // dark navy
                   benefits: [
                     "Company logo on banners",
                     "Free registration, including lodging and boarding for one person",
@@ -527,7 +530,12 @@ function App() {
                   className={`bg-navy/5 p-6 rounded-lg ${index !== array.length - 1 ? 'border-b border-gray-300 pb-8' : ''}`}
                 >
                   <h3 className="text-2xl font-bold text-navy mb-2">{tier.title}</h3>
-                  <p className="text-3xl font-bold text-golden mb-6">{tier.price}</p>
+                  <p
+                    className="text-3xl font-bold mb-6"
+                    style={{ color: tier.priceColor }}
+                  >
+                    {tier.price}
+                  </p>
                   <ul className="space-y-3 mb-6">
                     {tier.benefits.map((benefit, bIndex) => (
                       <li key={bIndex} className="flex items-center gap-2">
@@ -638,7 +646,7 @@ function App() {
                 </div>
                 <div className="flex items-center space-x-4">
                   <Phone className="text-golden" />
-                  <span>+91 94454 81096</span>
+                  <span>+91 94454 81096 (Dr. Baburaj) </span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <Mail className="text-golden" />
@@ -743,18 +751,26 @@ function App() {
                 </div>
               </div>
               <div>
-                <form className="space-y-4">
+                <form
+                  className="space-y-4"
+                  action="mailto:iac_me@iittp.ac.in"
+                  method="POST"
+                  encType="text/plain"
+                >
                   <input
                     type="text"
+                    name="name"
                     placeholder="Your Name"
                     className="w-full p-3 rounded bg-navy-light border border-golden/30 text-white"
                   />
                   <input
                     type="email"
+                    name="email"
                     placeholder="Your Email"
                     className="w-full p-3 rounded bg-navy-light border border-golden/30 text-white"
                   />
                   <textarea
+                    name="message"
                     placeholder="Your Message"
                     rows={4}
                     className="w-full p-3 rounded bg-navy-light border border-golden/30 text-white"
