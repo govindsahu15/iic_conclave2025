@@ -142,37 +142,42 @@ function App() {
               </div>
             </div>
             {/* Container for buttons with spacing */}
-            <div className="flex flex-col space-y-4 mt-8 md:flex-row md:space-x-4 md:space-y-0 justify-center">
+            <div className="flex flex-col mt-8 md:flex-row justify-center items-center gap-4 md:gap-6">
+              {/* Professional Button Card Style */}
               <a
                 href="https://www.iittp.ac.in/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-golden text-navy px-8 py-3 rounded-lg font-bold hover:bg-golden-light transition-colors duration-200 block"
+                className="flex items-center gap-3 bg-white border border-golden/40 shadow-md hover:shadow-lg px-7 py-3 rounded-xl font-semibold text-navy hover:bg-golden/20 transition-all duration-200 min-w-[220px] justify-center"
               >
+                <img src="/logo.png" alt="IIT Tirupati" className="h-7 w-7 rounded-full border border-golden/50" />
                 About IIT Tirupati
               </a>
               <a
                 href="https://mech.iittp.ac.in/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-golden text-navy px-8 py-3 rounded-lg font-bold hover:bg-golden-light transition-colors duration-200 block"
+                className="flex items-center gap-3 bg-white border border-golden/40 shadow-md hover:shadow-lg px-7 py-3 rounded-xl font-semibold text-navy hover:bg-golden/20 transition-all duration-200 min-w-[220px] justify-center"
               >
+                <img src="/hod.jpeg" alt="Department" className="h-7 w-7 rounded-full border border-golden/50" />
                 About Department
               </a>
               <a
                 href="ME Department Brochure.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-golden text-navy px-8 py-3 rounded-lg font-bold hover:bg-golden-light transition-colors duration-200 block"
+                className="flex items-center gap-3 bg-white border border-golden/40 shadow-md hover:shadow-lg px-7 py-3 rounded-xl font-semibold text-navy hover:bg-golden/20 transition-all duration-200 min-w-[220px] justify-center"
               >
+                <img src="/logo.jpg" alt="Brochure" className="h-7 w-7 rounded-full border border-golden/50" />
                 Department Brochure
               </a>
               <a
                 href="Flyer_IAC_2025_ME_IIT Tirupati.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-golden text-navy px-8 py-3 rounded-lg font-bold hover:bg-golden-light transition-colors duration-200 block"
+                className="flex items-center gap-3 bg-white border border-golden/40 shadow-md hover:shadow-lg px-7 py-3 rounded-xl font-semibold text-navy hover:bg-golden/20 transition-all duration-200 min-w-[220px] justify-center"
               >
+                <img src="/Flyer_IAC_2025_ME_IIT Tirupati.png" alt="Flyer" className="h-7 w-7 rounded-full border border-golden/50" />
                 Flyer
               </a>
             </div>
@@ -264,7 +269,13 @@ function App() {
                   role: "Convenor",
                   title: "Technical Officer, IIT Tirupati",
                   image: "/baburaj.jpg"
-                }
+                },
+                {
+                  name: "Dr. Ajay Kumar",
+                  role: "Member",
+                  title: "Associate Professor, IIT Tirupati",
+                  image: "/AjayKumar.jpg"
+                },
               ].map((member, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
                   <img
